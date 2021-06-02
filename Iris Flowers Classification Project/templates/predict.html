@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="row justify-content-md-center mb-4">
+        <h3 class='text-primary'>Prediction is {{ prediction }}</h3>
+    
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 0 %}
+                <!-- <img src="{{url_for('static', filename='images/iris_setosa.jpg')}}" class="img-thumbnail" /> --> 
+                <h1>It is a setosa</h1>
+            {% endif %}
+        </div>
+    </div>
+        
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 1 %}
+                <!-- <img src="{{url_for('static', filename='images/iris_versicolor.jpg')}}" class="img-thumbnail" /> --> 
+                <h1>It is a versicolor</h1>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 3 %}
+                <!-- <img src="{{url_for('static', filename='images/iris_virginica.jpg')}}" class="img-thumbnail" /> --> 
+                <h1>It is a verginica.</h1>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
